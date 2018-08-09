@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'FrontEndController@index');
+Route::get('/about', 'FrontEndController@about');
+Route::get('/work', 'FrontEndController@work');
+Route::get('/contact', 'FrontEndController@contact');
 
 Auth::routes();
 
