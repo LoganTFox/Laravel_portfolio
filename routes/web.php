@@ -11,10 +11,16 @@
 |
 */
 
-Route::get('/', 'FrontEndController@index');
-Route::get('/about', 'FrontEndController@about');
-Route::get('/work', 'FrontEndController@work');
-Route::get('/contact', 'FrontEndController@contact');
+/* Front End Routes */
+Route::get('/', 'FrontEndController@index')->name('frontend.home');
+Route::get('/about', 'FrontEndController@about')->name('frontend.about');
+Route::get('/work', 'FrontEndController@work')->name('frontend.work');
+Route::get('/contact', 'FrontEndController@contact')->name('frontend.contact');
+
+/* Project Resource Routes */
+Route::get('/projects/create', 'ProjectsController@create');
+Route::post('/projects/create', 'ProjectsController@store');
+Route::get('/projects/{project}', 'ProjectsController@show')->name('projects.show');
 
 Auth::routes();
 

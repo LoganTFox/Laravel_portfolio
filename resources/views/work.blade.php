@@ -13,7 +13,7 @@
         <div class="projects">
             <div class="item">
                 <a href="#!">
-                    <img src="img/projects/project1.jpg" alt="Project">
+                    <img src="{{ asset('images/projects/project1.jpg') }}" alt="Project">
                 </a>
 
                 <a href="#" class="btn-light">
@@ -27,7 +27,7 @@
 
             <div class="item">
                 <a href="#!">
-                    <img src="img/projects/project2.jpg" alt="Project">
+                    <img src="{{ asset('images/projects/project2.jpg') }}" alt="Project">
                 </a>
 
                 <a href="#" class="btn-light">
@@ -41,7 +41,7 @@
 
             <div class="item">
                 <a href="#!">
-                    <img src="img/projects/project3.jpg" alt="Project">
+                    <img src="{{ asset('images/projects/project3.jpg') }}" alt="Project">
                 </a>
 
                 <a href="#" class="btn-light">
@@ -55,7 +55,7 @@
 
             <div class="item">
                 <a href="#!">
-                    <img src="img/projects/project4.jpg" alt="Project">
+                    <img src="{{ asset('images/projects/project4.jpg') }}" alt="Project">
                 </a>
 
                 <a href="#" class="btn-light">
@@ -69,7 +69,7 @@
 
             <div class="item">
                 <a href="#!">
-                    <img src="img/projects/project5.jpg" alt="Project">
+                    <img src="{{ asset('images/projects/project5.jpg') }}" alt="Project">
                 </a>
 
                 <a href="#" class="btn-light">
