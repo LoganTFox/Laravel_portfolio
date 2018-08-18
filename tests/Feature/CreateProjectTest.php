@@ -46,4 +46,34 @@ class CreateProjectTest extends TestCase
         $this->get(route('projects.show', ['id' => $createdProject->id]))
             ->assertSee($createdProject->title);
     }
+
+    /** @test */
+    public function a_project_requires_a_title()
+    {
+        $this->publishProject(['title' => null])
+            ->assertSessionHasErrors('title');
+    }
+
+    /** @test */
+    public function a_project_requires_a_link()
+    {
+        $this->publishProject(['link' => null])
+            ->assertSessionHasErrors('link');
+    }
+
+    /** @test */
+    public function a_project_requires_a_github_link()
+    {
+        $this->publishProject(['github' => null])
+            ->assertSessionHasErrors('github');
+    }
+
+    public function publishProject($overrides = [])
+    {
+        $this->withExceptionHandling()->signIn();
+
+        $project = make('App\Project', $overrides);
+
+        return $this->post('/projects/create', $project->toArray());
+    }
 }
